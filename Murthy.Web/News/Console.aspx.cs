@@ -422,11 +422,6 @@ namespace Murthy.Web.News
                     
             }
 
-
-
-
-
-
         }
     }
 }
