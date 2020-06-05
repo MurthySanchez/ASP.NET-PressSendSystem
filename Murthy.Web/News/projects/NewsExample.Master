@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NewsExample.master.cs" Inherits="Murthy.Web.News.projects.NewsExample" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Murthy NEWS-咨询</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript" src="/js/showdown.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Styles/news.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="bg1"></div>
+        <div id="bg2"></div>
+        <div id="outer">
+            <div id="main">
+                <div id="sidebar">
+                    <div class="box">
+                        <h3>目录
+                        </h3>
+                        <div class="dateList">
+                            <ul class="linkedList dateList">
+                                <li class="first">
+                                    <span class="date">头条</span> <a href="/News/Main.aspx#boxHotSpots">今日头条</a>
+                                </li>
+                                <li>
+                                    <span class="date">热点</span> <a href="/News/Main.aspx#boxHotNews">热点要闻</a>
+                                </li>
+                                <li>
+                                    <span class="date">近日</span> <a href="/News/Main.aspx#boxRecentNews">近日新闻</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="realTimebox">
+                        <h3>即时新闻
+                        </h3>
+                        <asp:PlaceHolder ID="Ph_RealTimeNews" runat="server"></asp:PlaceHolder>
+
+                    </div>
+                </div>
+
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+
+                <br class="clear" />
+            </div>
+        </div>
+        <div id="copyright">
+            Copyright &copy; 2020 Murthy NewsStation.
+			<a href="/Account/Login.aspx">后台登陆</a>
+        </div>
+
+    </form>
+</body>
+</html>
